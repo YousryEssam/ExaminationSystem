@@ -1,18 +1,4 @@
 -- Test submit
---SELECT * FROM Student;
-
---SELECT * FROM Student_Exam_Question
-
---SELECT * FROM Exam;
-
---SELECT * FROM Course;
-
---SELECT * FROM Student_Course;
-
---SELECT * FROM Question 
---ORDER BY Course_Id;
-
-
 EXEC CreateExam 3, 1, 2, 1 ;
 
 select * from Student_Exam_Question 

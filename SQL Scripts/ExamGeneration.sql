@@ -4,12 +4,12 @@ CREATE PROCEDURE CreateExam
     @Course_Id INT,
     @Student_Id INT,
     @Num_Questions INT,
-    @Exam_Id INT   -- Ensure output parameter
+    @Exam_Id INT
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    -- Step 1: Insert a new exam record and get the generated ID
+    -- Step 1: Insert a new exam
     INSERT INTO Exam (Exam_Id, Exam_Type, Exam_Date, Course_Id)
     VALUES (@Exam_Id,'Final Exam', GETDATE(), @Course_Id);
 
@@ -30,7 +30,7 @@ BEGIN
 END;
 
 
--- Functinos 
+-- Helper Functinos 
 
 CREATE FUNCTION GetQuestionOptions(@Question_Id INT)
 RETURNS TABLE

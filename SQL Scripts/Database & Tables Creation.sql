@@ -58,7 +58,7 @@ CREATE TABLE Exam (
 
 CREATE TABLE Question (
     Question_Id INT PRIMARY KEY,
-    Question_Type VARCHAR(50) NOT NULL CHECK (Question_Type IN ('MCQ', 'MMCQ', 'T/F')),
+    Question_Type VARCHAR(50) NOT NULL CHECK (Question_Type IN ('MCQ', 'MMCQ',ï¿½'T/F')),
     Question_Text TEXT NOT NULL,
     Course_Id INT,
     FOREIGN KEY (Course_Id) REFERENCES Course(Course_Id)
